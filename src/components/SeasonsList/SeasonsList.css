@@ -1,0 +1,55 @@
+.seasons-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.seasons-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.season {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.season:hover {
+  transform: scale(1.05);
+}
+
+.season h3 {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.season img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .season {
+    display: flex;
+    align-items: center;
+  }
+
+  .season img {
+    width: 200px;
+    height: auto;
+  }
+
+  .season h3 {
+    flex: 1;
+  }
+}
