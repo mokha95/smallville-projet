@@ -1,0 +1,39 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navigation.css";
+
+const Navigation = () => {
+  return (
+    <nav className="navigation">
+      <ul className="navigation-list">
+        <li className="navigation-item">
+          <Link to="/" className="navigation-link">
+            Explorer
+          </Link>
+        </li>
+        <li className="navigation-item">
+          <Link to="/episodes" className="navigation-link">
+            La Serie
+          </Link>
+        </li>
+        <li className="navigation-item">
+          <Link to="/characters" className="navigation-link">
+            les épisodes
+          </Link>
+        </li>
+        <li className="navigation-item">
+          <Link to="/community" className="navigation-link">
+            les Personnages
+          </Link>
+        </li>
+        <li className="navigation-item">
+          <Link to="/community" className="navigation-link">
+            Communauté
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navigation;

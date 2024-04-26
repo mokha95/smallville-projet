@@ -1,0 +1,28 @@
+.navigation {
+  background-color: #1a1c2c;
+  color: #ffffff;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.navigation-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-item {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navigation-link:hover {
+  text-decoration: underline;
+}

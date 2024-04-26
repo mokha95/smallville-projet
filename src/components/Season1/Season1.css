@@ -1,0 +1,39 @@
+.season-container {
+  /* max-width: 800px;
+  margin: 0 auto; */
+  padding: 20px;
+  background-color: #1a1c2c;
+  color: #fff; /* Couleur du texte */
+  height: 100vh;
+}
+
+.season-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.saison1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  /* justify-content: center; */
+}
+
+.saison1 img {
+  width: 450px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.infos {
+  font-size: 18px;
+}
+
+.infos h3 {
+  margin-top: 20px;
+}
+
+.infos p {
+  margin-bottom: 20px;
+}

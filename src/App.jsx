@@ -10,18 +10,29 @@ import Quiz from "./components/Quiz/Quiz";
 import CommentsSection from "./components/CommentsSection/CommentsSection";
 import Home from "./components/Home/Home";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
+import Season1 from "./components/Season1/Season1";
+import Season3 from "./components/Season3/Season3";
+import Season2 from "./components/Season2/Season2";
+import Navigation from "./components/Navigation/Navigation";
+
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route exact path="/" Component={Home} />
-        <Route path="/CommentsSection" Component={CommentsSection} />
-        <Route path="/CharacterProfile" Component={CharacterProfile} />
-        <Route path="/EpisodeDetails" Component={EpisodeDetails} />
-        <Route path="*" element={<ErrorPage />} />
+      <div>
+        <Navigation />
+        <Routes>
+          <Route exact path="/" Component={Home} />
+          <Route path="/CommentsSection" Component={CommentsSection} />
+          <Route path="/CharacterProfile" Component={CharacterProfile} />
+          <Route path="/EpisodeDetails" Component={EpisodeDetails} />
+          <Route path="/Season1" Component={Season1} />
+          <Route path="/Season2" Component={Season2} />
+          <Route path="/Season3" Component={Season3} />
+          <Route path="*" element={<ErrorPage />} />
 
-        {/* Ajoutez les autres routes ici */}
-      </Routes>
+          {/* Ajoutez les autres routes ici */}
+        </Routes>
+      </div>
     </Router>
   );
 }
