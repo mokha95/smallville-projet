@@ -89,7 +89,7 @@ const charactersData = [
       "Jonathan est motivé par l'amour pour sa famille et le désir de protéger Clark. Il enseigne à Clark les valeurs de l'honnêteté et du sacrifice, le préparant à devenir un héros responsable.",
     evolution:
       "Jonathan évolue d'un père protecteur à un guide sage pour Clark. Sa relation avec Clark façonne le caractère et les choix moraux de Clark tout au long de la série.",
-    imageUrl: Lois,
+    imageUrl: JonathanKent,
   },
   //  personnage
   {
@@ -141,7 +141,7 @@ const charactersData = [
       "Les motivations de Lois sont centrées sur son amour pour la vérité, le journalisme d'investigation et sa curiosité insatiable. Elle est déterminée à découvrir la vérité derrière les événements mystérieux de Smallville.",
     evolution:
       "Lois évolue d'une journaliste curieuse à une figure emblématique du journalisme. Son lien avec Clark se transforme en une romance profonde et elle devient un soutien indispensable pour lui.",
-    imageUrl: JonathanKent,
+    imageUrl: Lois,
   },
 ];
 export default function Personnages() {

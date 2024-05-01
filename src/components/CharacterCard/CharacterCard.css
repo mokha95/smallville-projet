@@ -19,8 +19,9 @@ body {
 h1 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #e19500;
+  color: #e19500 !important;
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .character-card {
