@@ -12,7 +12,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="navigation-item">
-          <Link to="/episodes" className="navigation-link">
+          <Link to="/PlaceList" className="navigation-link">
             La Serie
           </Link>
         </li>

@@ -15,6 +15,7 @@ import Season3 from "./components/Season3/Season3";
 import Season2 from "./components/Season2/Season2";
 import Navigation from "./components/Navigation/Navigation";
 import Personnages from "./components/Personnages/Personnages";
+import PlaceList from "./components/PlaceList/PlaceList";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Season2" Component={Season2} />
           <Route path="/Season3" Component={Season3} />
           <Route path="/Personnages" Component={Personnages} />
+          <Route path="/PlaceList" Component={PlaceList} />
           <Route path="*" element={<ErrorPage />} />
 
           {/* Ajoutez les autres routes ici */}
