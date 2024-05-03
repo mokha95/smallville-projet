@@ -1,45 +1,94 @@
 import React from "react";
-import smallville from "../../assets/img/lieux/smallville city.jpg";
+import "./PlaceList.css";
+
+import smallville2 from "../../assets/img/lieux/leTalonSmallville.webp";
+import DailyPlanet from "../../assets/img/lieux/Daily-Planet-Smallville.webp";
+import HighSchoolSmallville from "../../assets/img/lieux/Smallville_second_high_school (1).webp";
+import Metropolis from "../../assets/img/lieux/Metropolis2013.webp";
+import LuthorCorp from "../../assets/img/lieux/luthorCorp.webp";
+import FermeDesKent from "../../assets/img/lieux/Ferme_des_Kent_.webp";
+import PlaceDetail from "../PlaceDetail/PlaceDetail";
 
 // placesData.js
 
 const placesData = [
   {
-    name: "Lycée de Smallville",
-    description: `Le lycée de Smallville est un établissement scolaire important dans la série. C'est là que les personnages principaux, tels que Clark Kent, Lana Lang et Chloe Sullivan, ont suivi leurs études secondaires. Le lycée est le lieu de nombreuses scènes clés de la série, où les jeunes protagonistes font face à des défis personnels et découvrent souvent de nouveaux aspects de leurs pouvoirs et de leur destin.`,
-    imageUrl: "url_de_l_image_lycee",
+    name: "Smallville",
+    description: `Smallville est bien plus qu'une simple petite ville rurale ; c'est un lieu emblématique et central dans la série, imprégné de mystères et de légendes. Au cœur de cette communauté se trouve une richesse de secrets et d'intrigues, chacun lié aux habitants et aux lieux qui façonnent l'histoire de la série. Pour Clark Kent, Smallville représente un terreau fertile où il découvre les vérités sur ses origines extraterrestres et les implications de ses pouvoirs surhumains.
+
+    Chaque coin de la ville renferme des histoires fascinantes : du lycée où Clark a fréquenté ses camarades de classe, aux rues animées du centre-ville, en passant par les vastes étendues de la ferme Kent où il a grandi. Smallville devient ainsi un personnage à part entière, un reflet des luttes et des triomphes de Clark.
+    
+    La beauté de Smallville réside dans son ambiance rurale et authentique, combinée à une atmosphère imprégnée de secrets et de mystères qui inspirent les aventures et les révélations. Chaque épisode révèle un nouveau chapitre de cette ville mythique, offrant aux téléspectateurs un aperçu captivant de l'univers de Clark Kent et de son héritage extraterrestre.`,
+    imageUrl: smallville2,
+    id: 1,
   },
+
   {
     name: "Ferme Kent",
-    description: `La ferme Kent est le foyer de Clark Kent, où il a été élevé par ses parents adoptifs, Jonathan et Martha Kent. C'est un endroit tranquille et isolé à la périphérie de Smallville, où Clark a appris à maîtriser ses pouvoirs extraordinaires tout en développant des valeurs morales solides. La ferme Kent représente un refuge sûr pour Clark et joue un rôle central dans son développement en tant que super-héros.`,
-    imageUrl: "url_de_l_image_ferme",
+    description: `
+    La ferme Kent est bien plus qu'un simple lieu de résidence pour Clark Kent - c'est son sanctuaire, son cocon protecteur où il a été élevé par Jonathan et Martha Kent. Située à la périphérie tranquille de Smallville, cette ferme isolée a été le théâtre de l'enfance et de l'adolescence de Clark. C'est là qu'il a appris à maîtriser ses incroyables pouvoirs tout en développant des valeurs morales solides, façonnées par les enseignements bienveillants de ses parents adoptifs. La ferme Kent symbolise non seulement un lieu de résidence, mais aussi un refuge sûr où Clark a pu grandir et s'épanouir, apprenant à embrasser son identité extraordinaire tout en maintenant les pieds sur terre. Son histoire avec la ferme Kent est au cœur de son développement en tant que super-héros et de son engagement envers le bien.`,
+    imageUrl: FermeDesKent,
+    id: 2,
   },
   {
-    name: "Smallville",
-    description: `Smallville est la petite ville rurale où se déroulent la plupart des événements de la série. C'est un endroit emblématique chargé de mystères, avec ses habitants et ses lieux empreints de secrets et de légendes. Smallville est le cadre idéal pour les aventures de Clark Kent et la découverte de son héritage extraterrestre.`,
-    imageUrl: "url_de_l_image_smallville",
+    name: "Lycée de Smallville",
+    description: `
+    Le lycée de Smallville occupe une place centrale dans la série, représentant un lieu essentiel où les personnages principaux ont évolué. Clark Kent, Lana Lang et Chloe Sullivan y ont suivi leurs études secondaires, forgeant des amitiés et des liens qui ont façonné leur parcours. C'est au sein de cet établissement que se déroulent de nombreuses scènes clés, témoignant des défis personnels auxquels les jeunes protagonistes sont confrontés. Le lycée devient ainsi le théâtre où s'expriment leurs découvertes sur leurs pouvoirs et leur destin, offrant un contexte riche en émotions et en rebondissements. Cette atmosphère éducative renforce l'importance narrative du lieu dans la série, enrichissant le récit et contribuant à l'évolution des personnages.`,
+    imageUrl: HighSchoolSmallville,
+    id: 3,
   },
+
   {
     name: "Daily Planet",
-    description: `Le Daily Planet est le principal journal de Metropolis où travaille Lois Lane en tant que journaliste d'investigation. C'est un symbole d'intégrité journalistique et de lutte contre le crime et la corruption à Metropolis. Le bâtiment du Daily Planet est souvent le théâtre d'événements cruciaux de l'univers de Superman.`,
-    imageUrl: "url_de_l_image_daily_planet",
+    description: `
+    Le Daily Planet est bien plus qu'un simple journal ; il incarne l'intégrité et l'engagement journalistique dans l'univers de Metropolis. C'est là que Lois Lane, une journaliste d'investigation passionnée, se bat pour révéler la vérité au grand public. Le journal est un bastion de l'éthique journalistique, un phare de la liberté de la presse dans une ville confrontée à de nombreux défis.
+    
+    Situé au cœur de Metropolis, le bâtiment du Daily Planet est une icône reconnaissable, souvent témoin d'événements cruciaux et de confrontations entre le bien et le mal. Pour Lois Lane et ses collègues, le journal représente un lieu de rassemblement où les histoires les plus importantes prennent vie, offrant une plateforme pour exposer la corruption et l'injustice.
+    
+    Le Daily Planet devient ainsi un élément essentiel de l'univers de Superman, un lieu où la vérité est recherchée et défendue avec détermination. Son architecture imposante et son histoire captivante en font un pilier de la société médiatique de Metropolis, symbolisant la lutte contre les forces obscures qui menacent la ville et ses habitants.`,
+    imageUrl: DailyPlanet,
+    id: 4,
   },
   {
     name: "Metropolis",
-    description: `Metropolis est la grande métropole urbaine où se déroulent de nombreuses aventures de Superman. C'est une ville moderne, vibrante et dynamique, mais aussi le théâtre de nombreux défis et dangers. Metropolis abrite de nombreux personnages emblématiques de l'univers DC Comics.`,
-    imageUrl: "url_de_l_image_metropolis",
+    description: `Metropolis est bien plus qu'une simple métropole ; c'est le cœur palpitant d'un univers vibrant et dynamique où se déroulent les aventures légendaires de Superman. Cette grande ville moderne regorge de gratte-ciel étincelants, de rues animées et d'une énergie électrique constante qui la distingue des autres grandes métropoles fictives.
+
+    Au-delà de ses attraits architecturaux, Metropolis est le lieu de rencontre de nombreux personnages emblématiques de l'univers DC Comics, de Superman à Lex Luthor en passant par Lois Lane. La ville est un théâtre où se déroulent des défis épiques, des confrontations héroïques et des luttes intenses entre le bien et le mal.
+    
+    Cependant, derrière sa façade moderne et ses lumières éblouissantes, Metropolis abrite également de sombres secrets et des dangers imprévisibles. C'est un lieu où le courage et la détermination de ses héros sont mis à l'épreuve à chaque tournant.
+    
+    En somme, Metropolis incarne l'esprit de l'aventure et de la modernité dans l'univers des super-héros. C'est un endroit où l'espoir brille toujours, même au milieu des défis les plus redoutables.`,
+    imageUrl: Metropolis,
+    id: 5,
   },
   {
     name: "LuthorCorp",
-    description: `LuthorCorp est une puissante entreprise multinationale fondée par Lex Luthor à Metropolis. C'est un conglomérat aux activités diverses, allant des technologies de pointe à la recherche scientifique. LuthorCorp représente le pouvoir économique et la machination stratégique de Lex Luthor dans le monde des affaires et au-delà.`,
-    imageUrl: "url_de_l_image_luthorcorp",
+    description: `LuthorCorp est bien plus qu'une simple entreprise ; c'est un empire économique et technologique bâti sur l'ambition dévorante de Lex Luthor. Fondée à Metropolis, LuthorCorp domine le paysage des affaires avec ses activités diversifiées, allant des technologies de pointe à la recherche scientifique de pointe.
+
+    En tant que conglomérat multinational, LuthorCorp incarne le pouvoir financier et la machination stratégique de Lex Luthor. À travers cette entreprise, Lex étend son influence sur la ville de Metropolis et au-delà, cherchant à façonner le monde à sa manière.
+    
+    LuthorCorp est également un foyer de controverses, de secrets et de manigances. Derrière les façades brillantes de ses tours de verre se cachent des intrigues diaboliques et des expérimentations clandestines qui alimentent les ambitions démesurées de Lex Luthor.
+    
+    En résumé, LuthorCorp symbolise la fusion entre le pouvoir économique, la technologie de pointe et les ambitions dévorantes d'un homme. C'est un pilier central de l'univers de Superman, où la lutte pour le pouvoir et la vérité se joue sur le champ de bataille des affaires.`,
+    imageUrl: LuthorCorp,
+    id: 6,
   },
 ];
 
 export default function PlaceList() {
   return (
-    <>
-      <img src={smallville} alt="ville" />
-    </>
+    <div className="center-container">
+      <div className="place-list">
+        {placesData.map((places) => (
+          <div key={places.id} className="place-item">
+            {/* Affiche le composant PlaceDetail avec les props appropriées */}
+
+            <h2 className="text-center p-3">{places.name}</h2>
+            <img src={places.imageUrl} alt={places.name} />
+            <p className="paragrapheDescription">{places.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
