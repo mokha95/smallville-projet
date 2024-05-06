@@ -1,14 +1,21 @@
 import "./PlaceDetail.css";
 import { useState } from "react";
 
-export default function PlaceDetail({ name, description, imageUrl }) {
-  const [showDetauls, setShowDetails] = useState(false);
+export default function PlaceDetail({
+  showdetails,
+  name,
+  description,
+  imageUrl,
+}) {
   return (
     <>
-      <h1>Place details</h1>
-      <h2>{name}</h2>
-      <p>{description}</p>
-      <img src={imageUrl} alt="" />
+      {showdetails && (
+        <div>
+          <h1>{name}</h1>
+          <img src={imageUrl} alt={name} />
+          <p>{description}</p>
+        </div>
+      )}
     </>
   );
 }

@@ -31,6 +31,11 @@ const Navigation = () => {
             Communauté
           </Link>
         </li>
+        <li className="navigation-item">
+          <Link to="/community" className="navigation-link">
+            Boutique
+          </Link>
+        </li>
       </ul>
     </nav>
   );

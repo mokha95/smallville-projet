@@ -39,3 +39,16 @@
 .paragrapheDescription {
   line-height: 30px;
 }
+.btnInfos {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+.btnDetail {
+  color: #fff;
+  padding: 10px;
+  background: #e19500;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+}

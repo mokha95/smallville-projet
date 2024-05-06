@@ -1,6 +1,6 @@
 import React from "react";
 import "./PlaceList.css";
-
+import { Link } from "react-router-dom";
 import smallville2 from "../../assets/img/lieux/leTalonSmallville.webp";
 import DailyPlanet from "../../assets/img/lieux/Daily-Planet-Smallville.webp";
 import HighSchoolSmallville from "../../assets/img/lieux/Smallville_second_high_school (1).webp";
@@ -8,6 +8,7 @@ import Metropolis from "../../assets/img/lieux/Metropolis2013.webp";
 import LuthorCorp from "../../assets/img/lieux/luthorCorp.webp";
 import FermeDesKent from "../../assets/img/lieux/Ferme_des_Kent_.webp";
 import PlaceDetail from "../PlaceDetail/PlaceDetail";
+import { useState } from "react";
 
 // placesData.js
 
@@ -76,6 +77,11 @@ const placesData = [
 ];
 
 export default function PlaceList() {
+  const [showdetails, setShowDetails] = useState(false);
+
+  function handleClickBtn() {
+    setShowDetails(!showdetails);
+  }
   return (
     <div className="center-container">
       <div className="place-list">
@@ -84,8 +90,22 @@ export default function PlaceList() {
             {/* Affiche le composant PlaceDetail avec les props appropriées */}
 
             <h2 className="text-center p-3">{places.name}</h2>
+
             <img src={places.imageUrl} alt={places.name} />
             <p className="paragrapheDescription">{places.description}</p>
+            <div className="btnInfos">
+              <Link to={`/place/${places.id}`}>
+                <button onClick={handleClickBtn} className="btnDetail">
+                  En savoir plus
+                </button>
+              </Link>
+            </div>
+            <PlaceDetail
+              showdetails={showdetails}
+              name={places.name}
+              description={places.description}
+              imageUrl={places.imageUrl}
+            />
           </div>
         ))}
       </div>
