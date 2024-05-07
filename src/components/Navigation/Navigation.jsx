@@ -16,23 +16,23 @@ const Navigation = () => {
             La Serie
           </Link>
         </li>
-        <li className="navigation-item">
+        {/* <li className="navigation-item">
           <Link to="/characters" className="navigation-link">
             les épisodes
           </Link>
-        </li>
+        </li> */}
         <li className="navigation-item">
           <Link to="/Personnages" className="navigation-link">
             les Personnages
           </Link>
         </li>
-        <li className="navigation-item">
+        {/* <li className="navigation-item">
           <Link to="/community" className="navigation-link">
             Communauté
           </Link>
-        </li>
+        </li> */}
         <li className="navigation-item">
-          <Link to="/community" className="navigation-link">
+          <Link to="/Boutique" className="navigation-link">
             Boutique
           </Link>
         </li>

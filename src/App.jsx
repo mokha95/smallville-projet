@@ -17,6 +17,8 @@ import Navigation from "./components/Navigation/Navigation";
 import Personnages from "./components/Personnages/Personnages";
 import PlaceList from "./components/PlaceList/PlaceList";
 import PlaceDetail from "./components/PlaceDetail/PlaceDetail";
+import Boutique from "./components/Boutique/Boutique";
+import Entrainement from "./components/Entrainement/Entrainement";
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
           <Route path="/PlaceList" Component={PlaceList} />
           {/* <Route path="/PlaceDetail" Component={PlaceDetail} /> */}
           <Route path="/place/:id" Component={PlaceDetail} />
+          <Route path="Boutique" Component={Boutique} />
           <Route path="*" element={<ErrorPage />} />
 
           {/* Ajoutez les autres routes ici */}

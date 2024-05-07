@@ -1,0 +1,38 @@
+.boutique-container {
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.carte {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carte img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.info {
+  padding: 15px;
+}
+
+.nom {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.prix {
+  font-size: 16px;
+  color: #fff;
+}
