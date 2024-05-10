@@ -7,7 +7,13 @@ const Navigation = () => {
     <nav className="navigation">
       <ul className="navigation-list">
         <li className="navigation-item">
-          <Link to="/" className="navigation-link">
+          {/* Naavigation */}
+          <Link to="/Accueil" className="navigation-link">
+            Accueil
+          </Link>
+        </li>
+        <li className="navigation-item">
+          <Link to="/Home" className="navigation-link">
             Explorer
           </Link>
         </li>

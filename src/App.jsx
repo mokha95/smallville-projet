@@ -19,6 +19,8 @@ import PlaceList from "./components/PlaceList/PlaceList";
 import PlaceDetail from "./components/PlaceDetail/PlaceDetail";
 import Boutique from "./components/Boutique/Boutique";
 import Entrainement from "./components/Entrainement/Entrainement";
+import Accueil from "./components/Accueil/Accueil";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
       <div>
         <Navigation />
         <Routes>
-          <Route exact path="/" Component={Home} />
+          <Route exact path="/" Component={Accueil} />
+          <Route exact path="/Accueil" Component={Accueil} />
+          <Route exact path="/Home" Component={Home} />
           <Route path="/CommentsSection" Component={CommentsSection} />
           <Route path="/CharacterProfile" Component={CharacterProfile} />
           <Route path="/EpisodeDetails" Component={EpisodeDetails} />
@@ -42,6 +46,7 @@ function App() {
 
           {/* Ajoutez les autres routes ici */}
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

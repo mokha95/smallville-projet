@@ -11,3 +11,9 @@ a {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.carousel-indicators {
+  z-index: 0;
+
+  /* top: 20px; */
+}

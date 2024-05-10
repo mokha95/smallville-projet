@@ -14,7 +14,6 @@ function Home() {
         </p>
         <SeasonsList />
       </div>
-      <Footer />
     </>
   );
 }

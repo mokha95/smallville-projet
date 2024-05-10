@@ -1,0 +1,67 @@
+.carousel-image {
+  max-width: 550px; /* Définit une largeur maximale de 550px */
+  margin: 0 auto; /* Centre l'image horizontalement */
+  height: auto; /* Assure la hauteur proportionnelle en fonction de la largeur */
+}
+
+.AccueilSmallville {
+  color: #fff !important;
+  text-transform: uppercase;
+  /* border: 1px solid #ff0101; */
+}
+
+.AccueilBloc {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.border1 {
+  border: 1.5px solid #e19500;
+  padding: 20px;
+  margin-top: 30px;
+}
+/* Accueil.css */
+
+.persoTitre {
+  color: #e19500;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.Liens1 {
+  color: #e19500;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.borderRouge {
+  border: 1.5px solid #e19500;
+  margin: 20px;
+}
+
+.borderRouge {
+  margin-bottom: 30px;
+}
+
+.persoTitre {
+  border: 1.5px solid #e19500;
+  width: 550px;
+  margin: 0 auto;
+  padding: 15px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.textSmallville {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.personnages {
+  display: flex;
+  flex-wrap: wrap;
+}
