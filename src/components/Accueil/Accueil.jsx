@@ -22,8 +22,10 @@ import PeteRoss from "../../assets/img/PersonnageProfil/Pete_Ross.webp";
 import Tess from "../../assets/img/PersonnageProfil/Tess_Mercer.webp";
 import whitney from "../../assets/img/PersonnageProfil/Whitney_Fordman.webp";
 import Zod from "../../assets/img/PersonnageProfil/Zod.webp";
+import KaralaplusBelle from "../../assets/img/PersonnageProfil/Kara_Kent.webp";
 // import styles from "./Accueil.css";
 import "./Accueil.css"; // Ajout du fichier CSS pour les styles personnalisés
+import AllSeasons from "../AllSeasons/AllSeasons";
 
 const persoSmallville = [
   {
@@ -106,6 +108,11 @@ const persoSmallville = [
     prenom: "Zod",
     imageUrl: Zod,
   },
+  {
+    id: 17,
+    prenom: "Kara Kent",
+    imageUrl: KaralaplusBelle,
+  },
 ];
 
 function Accueil() {
@@ -168,14 +175,20 @@ function Accueil() {
         </Carousel>
 
         <h2 className="mt-5 persoTitre">PERSONNAGES</h2>
-        <div className="personnages mt-5">
+        <div className="personnages mt-5 pb-5">
           {persoSmallville.map((perso) => (
             <div key={perso.id} className="personnage">
-              <img className="m-1" src={perso.imageUrl} alt={perso.prenom} />
-              <p>{perso.prenom}</p>
+              <div className="persoCard">
+                <img className="m-1" src={perso.imageUrl} alt={perso.prenom} />
+                <p>
+                  {" "}
+                  <button className="btnNom"> {perso.prenom} </button>
+                </p>
+              </div>
             </div>
           ))}
         </div>
+        <AllSeasons />
       </div>
     </>
   );

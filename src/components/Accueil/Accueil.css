@@ -64,4 +64,27 @@
 .personnages {
   display: flex;
   flex-wrap: wrap;
+ 
+}
+
+.persoCard{
+  border: 2px solid #1c302e;
+  margin: 2px;
+}
+
+.persoCard button{
+  text-align: center;
+  font-size: 12px;
+}
+.persoCard p{
+  text-align: center;
+}
+.btnNom{
+  color: #879f9f;
+  font-size: x-small;
+padding: 0 5px;
+  background: #1c302e;
+  border-radius: 5px 0;
+  font-weight: bold;
+  border: none;
 }

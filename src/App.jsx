@@ -46,8 +46,8 @@ function App() {
 
           {/* Ajoutez les autres routes ici */}
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </Router>
   );
 }
