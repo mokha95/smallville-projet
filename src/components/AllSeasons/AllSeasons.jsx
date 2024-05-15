@@ -13,52 +13,52 @@ import "./AllSeasons.css"; // Ajout du fichier CSS pour les styles personnalisé
 const saisonSmallville = [
   {
     saisonId: 1,
-    saisonNom: 1,
+    saisonNom: "Saison 1",
     imageUrl: saison1,
   },
   {
     saisonId: 2,
-    saisonNom: 2,
+    saisonNom: "Saison 2",
     imageUrl: saison2,
   },
   {
     saisonId: 3,
-    saisonNom: 3,
+    saisonNom: "Saison 3",
     imageUrl: saison3,
   },
   {
     saisonId: 4,
-    saisonNom: 4,
+    saisonNom: "Saison 4",
     imageUrl: saison4,
   },
   {
     saisonId: 5,
-    saisonNom: 5,
+    saisonNom: "Saison 5",
     imageUrl: saison5,
   },
   {
     saisonId: 6,
-    saisonNom: 6,
+    saisonNom: "Saison6",
     imageUrl: saison6,
   },
   {
     saisonId: 7,
-    saisonNom: 7,
+    saisonNom: "Saison 7",
     imageUrl: saison7,
   },
   {
     saisonId: 8,
-    saisonNom: 8,
+    saisonNom: "Saison 8",
     imageUrl: saison8,
   },
   {
     saisonId: 9,
-    saisonNom: 9,
+    saisonNom: "Saison 9",
     imageUrl: saison9,
   },
   {
     saisonId: 10,
-    saisonNom: 10,
+    saisonNom: "Saison 10",
     imageUrl: saison10,
   },
 ];
@@ -66,14 +66,14 @@ function AllSeasons() {
   return (
     <>
       <h2 className="mt-5 persoTitre">Saisons </h2>
-      <div className="personnages mt-5 pb-5">
+      <div className="personnagesSamallville mt-5 pb-5">
         {saisonSmallville.map((saisons) => (
           <div key={saisons.saisonId} className="personnage">
             <div className="persoCard">
               <img src={saisons.imageUrl} alt={saisons.saisonNom}></img>
               <p>
                 {" "}
-                <button className="btnNom"> </button>
+                <button className="btnNom">{saisons.saisonNom} </button>
               </p>
             </div>
           </div>

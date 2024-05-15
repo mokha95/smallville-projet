@@ -102,7 +102,7 @@ const charactersData = [
       "Martha est motivée par l'amour pour sa famille et son engagement envers le bien-être de Clark. Elle est un pilier de soutien pour Clark tout au long de ses défis et épreuves.",
     evolution:
       "Martha évolue d'une mère protectrice et attentionnée à une figure matriarcale forte. Son influence sur Clark contribue à façonner sa moralité et sa confiance en lui.",
-    imageUrl: Pete,
+    imageUrl: Martha,
   },
   //  personnage
   {
@@ -128,7 +128,7 @@ const charactersData = [
       "Les motivations de Pete sont motivées par l'amitié et la loyauté envers Clark. Il traverse des moments de doute et de peur en raison du secret de Clark, mais reste un ami fidèle.",
     evolution:
       "Pete évolue d'un ami curieux et compatissant à un allié mature et réfléchi pour Clark. Son amitié avec Clark est un élément important de l'évolution de Clark.",
-    imageUrl: Martha,
+    imageUrl: Pete,
   },
   //  personnage
   {

@@ -61,9 +61,11 @@
     font-weight: bold;
   }
   
-  .personnages {
+  .personnagesSamallville {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+    width: 700px;
    
   }
   
