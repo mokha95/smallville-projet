@@ -77,11 +77,6 @@ const placesData = [
 ];
 
 export default function PlaceList() {
-  const [showdetails, setShowDetails] = useState(false);
-
-  function handleClickBtn() {
-    setShowDetails(!showdetails);
-  }
   return (
     <div className="center-container">
       <div className="place-list">
@@ -94,18 +89,10 @@ export default function PlaceList() {
             <img src={places.imageUrl} alt={places.name} />
             <p className="paragrapheDescription">{places.description}</p>
             <div className="btnInfos">
-              <Link to={`/place/${places.id}`}>
-                <button onClick={handleClickBtn} className="btnDetail">
-                  En savoir plus
-                </button>
+              <Link>
+                <button className="btnDetail">En savoir plus</button>
               </Link>
             </div>
-            <PlaceDetail
-              showdetails={showdetails}
-              name={places.name}
-              description={places.description}
-              imageUrl={places.imageUrl}
-            />
           </div>
         ))}
       </div>

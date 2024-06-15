@@ -17,3 +17,44 @@ body {
 
   /* top: 20px; */
 }
+
+.barreDeRecherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.inputBoutique {
+  width: 100%;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 30px;
+}
+
+.barreDeRecherche i {
+  position: absolute;
+  color: #000;
+  background: #fff;
+  left: 1%;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price i {
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.price i:hover {
+  background-color: #c1c0c0c8;
+  transition: 0.2s ease-in-out;
+  /* color: #1a1c2c; */
+}
