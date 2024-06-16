@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import clarki from "../../assets/img/Boutique/tshirt-smallville.jpg";
 import tasse from "../../assets/img/Boutique/tasse.jpg";
 import telephone from "../../assets/img/Boutique/telephone.jpg";
@@ -233,6 +234,16 @@ const articlesList = [
 export default function Boutique() {
   // Déclare un état pour stocker le texte de filtre
   const [filtrer, setFiltrer] = useState("");
+  const [articles, setArticles] = useState([]); // Commence avec un tableau vide
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true); // Indiquer que le chargement commence
+    setTimeout(() => {
+      setArticles(articlesList); // Mettre à jour l'état des articles
+      setLoading(false); // Indiquer que le chargement est terminé
+    }, 3000); // Utilise 2000 millisecondes pour simuler le délai de chargement
+  }, []);
 
   // Fonction de gestion des entrées de l'utilisateur dans le champ de recherche
   function handleInput(e) {
@@ -256,27 +267,30 @@ export default function Boutique() {
           placeholder="Rechercher"
         />
       </div>
-      <div className="cartes">
-        {/* Filtre la liste des articles en fonction du texte de filtre */}
-        {articlesList
-          .filter((article) =>
-            // Garde seulement les articles dont le nom commence par le texte de filtre
-            article.nom.toLowerCase().startsWith(filtrer)
-          )
-          // Map chaque article filtré en un composant visuel
-          .map((article) => (
-            <div key={article.id} className="carte">
-              <img src={article.imageUrl} alt={article.nom} />
-              <div className="info">
-                <div className="nom">{article.nom}</div>
-                <div className="price">
-                  <div className="prix">{article.prix} €</div>
-                  <i className="fas fa-shopping-cart"></i>
+      {loading ? (
+        <div className="spinerLogo">
+          {" "}
+          <i className="fa-solid fa-spinner"></i>{" "}
+        </div>
+      ) : (
+        // Affiche un message de chargement pendant le chargement des données
+        <div className="cartes">
+          {articles
+            .filter((article) => article.nom.toLowerCase().startsWith(filtrer))
+            .map((article) => (
+              <div key={article.id} className="carte">
+                <img src={article.imageUrl} alt={article.nom} />
+                <div className="info">
+                  <div className="nom">{article.nom}</div>
+                  <div className="price">
+                    <div className="prix">{article.prix} €</div>
+                    <i className="fas fa-shopping-cart"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-      </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 }
