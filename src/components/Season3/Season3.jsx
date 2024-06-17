@@ -8,8 +8,8 @@ function Season3() {
       <h1 className="season-title">Saison 3</h1>
       <p>
         La deuxième saison de Smallville a été diffusée pour la première fois le
-        24 septembre 2002 et s'est terminée le 20 mai 2003, comprenant un total
-        de 23 épisodes.
+        24 septembre 2002 et s&apos;est terminée le 20 mai 2003, comprenant un
+        total de 23 épisodes.
       </p>
 
       <div className="saison1">
@@ -20,9 +20,9 @@ function Season3() {
         <h3 id="Synopsis">Synopsis</h3>
         <p>
           Dans cette saison, Clark Kent continue de découvrir et de développer
-          ses pouvoirs alors qu'il affronte de nouveaux défis et dangers à
+          ses pouvoirs alors qu&apos;il affronte de nouveaux défis et dangers à
           Smallville. Il doit jongler avec ses responsabilités en tant que héros
-          naissant tout en essayant de mener une vie normale d'adolescent.
+          naissant tout en essayant de mener une vie normale d&apos;adolescent.
         </p>
       </div>
     </div>

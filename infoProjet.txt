@@ -1,0 +1,41 @@
+<!-- Nom du Projet : Smallville Memory Lane Description : Smallville Memory Lane est
+une application web interactive qui permet aux fans de la série Smallville de
+revisiter les moments clés de la série à travers une exploration visuelle et
+narrative. Les utilisateurs peuvent naviguer à travers les saisons, les épisodes
+et les lieux emblématiques de Smallville pour revivre leurs moments préférés de
+la série. Fonctionnalités Potentielles : Exploration des Saisons et Épisodes :
+Les utilisateurs peuvent parcourir toutes les saisons et les épisodes de la
+série Smallville à l'aide d'une interface interactive. Résumés des Épisodes :
+Pour chaque épisode, affichez un résumé détaillé de l'intrigue, des événements
+clés et des personnages importants. Galerie d'Images : Intégrez une galerie
+d'images pour chaque épisode, présentant des captures d'écran et des photos de
+plateau. Carte de Smallville : Affichez une carte interactive de Smallville,
+mettant en évidence les principaux lieux de la série tels que la ferme Kent, le
+lycée de Smallville, le Talon, etc. Profils de Personnages : Fournissez des
+informations détaillées sur les principaux personnages de la série, y compris
+leur biographie, leurs motivations et leur évolution tout au long de la série.
+Quiz et Trivia : Intégrez des quiz et des jeux de trivia pour permettre aux fans
+de tester leurs connaissances sur Smallville. Commentaires et Partage : Les
+utilisateurs peuvent laisser des commentaires sur les épisodes, partager leurs
+réflexions et discuter avec d'autres fans. Technologies Utilisées : React : Pour
+la création de l'interface utilisateur interactive. React Router : Pour la
+gestion des routes et la navigation entre les pages. Firebase ou API externe :
+Pour stocker et récupérer les données sur les épisodes, les personnages, les
+images, etc. CSS Framework (comme Bootstrap) : Pour la mise en page et la
+conception réactive. Base de Données pour les Quiz : Pour stocker les questions
+et les réponses des quiz et des jeux de trivia. Objectif : Le but de ce projet
+est de créer une expérience immersive pour les fans de Smallville, en leur
+permettant de revivre et de découvrir à nouveau les moments emblématiques de la
+série. Cela peut également servir de plateforme éducative pour explorer les
+thèmes, les personnages et les événements de Smallville d'une manière engageante
+et divertissante. -->
+
+<!-- Ajouter des objets de l univers SUPERMAN comme des vetement figurines  A vendre sur une page , faire la page panier en bonus -->
+<!-- consignes 
+Créer un composant de détail pour chaque lieu (comme le lycée de Smallville) qui affiche des informations supplémentaires sur ce lieu lorsque l'utilisateur clique sur un bouton.
+Ajouter des boutons interactifs (comme "En savoir plus") qui déclenchent l'affichage de détails supplémentaires à l'aide de conditions ternaires.
+Mettre en place un formulaire de recherche qui utilise useState pour gérer l'état du champ de recherche et afficher les résultats en temps réel à mesure que l'utilisateur tape.
+Utiliser useState pour créer un panier ou une liste de favoris où les utilisateurs peuvent ajouter ou supprimer des lieux de leur choix. -->
+<!-- https://www.redbubble.com/fr/shop/smallville -->
+
+<!-- faire un input avec une barre de recherche pour chercher des produit , utiliser la methode filter -->
