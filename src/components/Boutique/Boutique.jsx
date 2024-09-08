@@ -254,43 +254,43 @@ export default function Boutique() {
   }
 
   return (
-    <div className="boutique-container">
-      <h1>Boutique</h1>
-      {/* Barre de recherche avec un champ de saisie */}
-      <div className="barreDeRecherche">
-        <i className="fa-solid fa-magnifying-glass mr-15"></i>
-        <input
-          // Appelle la fonction handleInput à chaque modification de l'entrée
-          onInput={handleInput}
-          className="inputBoutique"
-          type="text"
-          placeholder="Rechercher"
-        />
-      </div>
+    <>
       {loading ? (
         <div className="spinerLogo">
-          {" "}
-          <i className="fa-solid fa-spinner"></i>{" "}
+          <i className="fa-solid fa-spinner"></i>
         </div>
       ) : (
-        // Affiche un message de chargement pendant le chargement des données
-        <div className="cartes">
-          {articles
-            .filter((article) => article.nom.toLowerCase().startsWith(filtrer))
-            .map((article) => (
-              <div key={article.id} className="carte">
-                <img src={article.imageUrl} alt={article.nom} />
-                <div className="info">
-                  <div className="nom">{article.nom}</div>
-                  <div className="price">
-                    <div className="prix">{article.prix} €</div>
-                    <i className="fas fa-shopping-cart"></i>
+        <div className="boutique-container">
+          <h1>Boutique</h1>
+          <div className="barreDeRecherche">
+            <i className="fa-solid fa-magnifying-glass mr-15"></i>
+            <input
+              onInput={handleInput}
+              className="inputBoutique"
+              type="text"
+              placeholder="Rechercher"
+            />
+          </div>
+          <div className="cartes">
+            {articles
+              .filter((article) =>
+                article.nom.toLowerCase().startsWith(filtrer)
+              )
+              .map((article) => (
+                <div key={article.id} className="carte">
+                  <img src={article.imageUrl} alt={article.nom} />
+                  <div className="info">
+                    <div className="nom">{article.nom}</div>
+                    <div className="price">
+                      <div className="prix">{article.prix} €</div>
+                      <i className="fas fa-shopping-cart"></i>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
