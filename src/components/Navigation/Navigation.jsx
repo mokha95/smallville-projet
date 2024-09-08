@@ -42,6 +42,11 @@ const Navigation = () => {
             Boutique
           </Link>
         </li>
+        <li className="navigation-item">
+          <Link to="/Films" className="navigation-link">
+            Films
+          </Link>
+        </li>
       </ul>
     </nav>
   );

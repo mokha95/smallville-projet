@@ -21,6 +21,7 @@ import Boutique from "./components/Boutique/Boutique";
 import Entrainement from "./components/Entrainement/Entrainement";
 import Accueil from "./components/Accueil/Accueil";
 import Footer from "./components/Footer/Footer";
+import Films from "./components/Films/Films";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           {/* <Route path="/PlaceDetail" Component={PlaceDetail} /> */}
           <Route path="/place/:id" Component={PlaceDetail} />
           <Route path="Boutique" Component={Boutique} />
+          <Route path="Films" Component={Films} />
           <Route path="*" element={<ErrorPage />} />
 
           {/* Ajoutez les autres routes ici */}
