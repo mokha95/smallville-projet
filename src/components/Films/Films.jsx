@@ -114,10 +114,20 @@ function Films() {
         </div>
         <hr className={styles.trait1} />
 
-        <div>
+        <div className={styles.supermanCard}>
           {filmsListe.map((filmsListes) => (
-            <div key={filmsListes.id}>
-              <img src={filmsListes.imageUrl} alt={filmsListes.titre} />
+            <div
+              className="m-2 d-flex align-items-center justify-content-center"
+              key={filmsListes.id}
+              // style={{ width: "150px", height: "200px" }}
+            >
+              <img
+                className={`img-fluid  ${styles.imgCard}`}
+                src={filmsListes.imageUrl}
+                alt=""
+                // style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+              <h5 className="mt-4">{filmsListes.titre}</h5>
             </div>
           ))}
         </div>

@@ -37,5 +37,6 @@ Ajouter des boutons interactifs (comme "En savoir plus") qui déclenchent l'affi
 Mettre en place un formulaire de recherche qui utilise useState pour gérer l'état du champ de recherche et afficher les résultats en temps réel à mesure que l'utilisateur tape.
 Utiliser useState pour créer un panier ou une liste de favoris où les utilisateurs peuvent ajouter ou supprimer des lieux de leur choix. -->
 <!-- https://www.redbubble.com/fr/shop/smallville -->
-
 <!-- faire un input avec une barre de recherche pour chercher des produit , utiliser la methode filter -->
+meilleur films superman
+https://www.senscritique.com/top/resultats/les_meilleurs_films_superman/820602
