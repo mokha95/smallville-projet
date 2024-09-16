@@ -40,3 +40,61 @@ Utiliser useState pour créer un panier ou une liste de favoris où les utilisat
 <!-- faire un input avec une barre de recherche pour chercher des produit , utiliser la methode filter -->
 meilleur films superman
 https://www.senscritique.com/top/resultats/les_meilleurs_films_superman/820602
+http://anecdotes-series.over-blog.com/search/smallville/
+
+consigne composant boutique
+
+Gestion du panier :
+
+
+Créez un nouvel état pour gérer le panier (par exemple, avec useState).
+Ajoutez une fonction pour ajouter des articles au panier.
+Modifiez l'icône du panier pour qu'elle déclenche cette fonction au clic.
+
+
+Affichage du panier :
+
+
+Créez un nouveau composant pour afficher le contenu du panier.
+Ajoutez un moyen de basculer l'affichage du panier (peut-être avec un nouvel état).
+
+
+Interactivité accrue :
+
+
+Ajoutez la possibilité de modifier la quantité d'articles dans le panier.
+Implémentez une fonction pour calculer le total du panier.
+Ajoutez des animations lors de l'ajout au panier pour un retour visuel.
+
+
+Filtrage amélioré :
+
+
+Ajoutez des options de tri (par prix, par nom).
+Implémentez un système de catégories pour les articles.
+
+
+Détails des produits :
+
+
+Créez une vue détaillée pour chaque produit.
+Ajoutez un état pour gérer l'affichage de cette vue au clic sur un produit.
+
+
+Persistance des données :
+
+
+Utilisez le localStorage pour sauvegarder le panier entre les sessions.
+
+
+Responsive design :
+
+
+Améliorez la mise en page pour différentes tailles d'écran.
+
+
+Gestion des stocks :
+
+
+Ajoutez un système simple de gestion des stocks.
+Affichez un message quand un produit n'est plus disponible.

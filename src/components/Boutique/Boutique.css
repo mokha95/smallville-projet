@@ -36,3 +36,22 @@
   font-size: 16px;
   color: #fff;
 }
+
+.panier {
+  /* position: fixed; */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* padding: 10px; */
+  background: none;
+  /* border-radius: 50%; */
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+  z-index: 1000;
+}
+
+.fa-bucket{
+ font-size: 30px;
+ margin-bottom: 30px;
+ width: 100%;
+
+}

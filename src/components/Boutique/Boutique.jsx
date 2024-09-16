@@ -29,6 +29,7 @@ import logoS from "../../assets/img/Boutique/S-stickers.jpg";
 import smallvilleSerie from "../../assets/img/Boutique/smallville-stickers.jpg";
 import villeKansas from "../../assets/img/Boutique/villesmallvillekansas.jpg";
 import "./Boutique.css";
+import Cart from "../Cart/Cart";
 
 const articlesList = [
   {
@@ -236,6 +237,7 @@ export default function Boutique() {
   const [filtrer, setFiltrer] = useState("");
   const [articles, setArticles] = useState([]); // Commence avec un tableau vide
   const [loading, setLoading] = useState(false);
+  const [panier, setPanier] = useState([]);
 
   useEffect(() => {
     setLoading(true); // Indiquer que le chargement commence
@@ -253,6 +255,14 @@ export default function Boutique() {
     setFiltrer(filtrer.trim().toLowerCase());
   }
 
+  function handleClickPanier(article) {
+    // Passe une fonction à setPanier
+    setPanier((prevPanier) => {
+      // Crée une nouvelle version du panier avec l'article ajouté
+      return [...prevPanier, article];
+    });
+  }
+
   return (
     <>
       {loading ? (
@@ -262,6 +272,7 @@ export default function Boutique() {
       ) : (
         <div className="boutique-container">
           <h1>Boutique</h1>
+
           <div className="barreDeRecherche">
             <i className="fa-solid fa-magnifying-glass mr-15"></i>
             <input
@@ -271,6 +282,11 @@ export default function Boutique() {
               placeholder="Rechercher"
             />
           </div>
+
+          <div className="panier ">
+            <i className="fa-solid fa-bucket"></i>
+          </div>
+
           <div className="cartes">
             {articles
               .filter((article) =>
@@ -283,12 +299,17 @@ export default function Boutique() {
                     <div className="nom">{article.nom}</div>
                     <div className="price">
                       <div className="prix">{article.prix} €</div>
-                      <i className="fas fa-shopping-cart"></i>
+
+                      <i
+                        onClick={handleClickPanier}
+                        className="fas fa-shopping-cart"
+                      ></i>
                     </div>
                   </div>
                 </div>
               ))}
           </div>
+          {/* <Cart panier={panier} /> */}
         </div>
       )}
     </>
