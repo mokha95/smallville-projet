@@ -8,6 +8,8 @@ import Metropolis from "../../assets/img/lieux/Metropolis2013.webp";
 import LuthorCorp from "../../assets/img/lieux/luthorCorp.webp";
 import FermeDesKent from "../../assets/img/lieux/Ferme_des_Kent_.webp";
 import PlaceDetail from "../PlaceDetail/PlaceDetail";
+import Modal from "../Modal/Modal";
+
 import { useState } from "react";
 
 // placesData.js
@@ -77,25 +79,51 @@ const placesData = [
 ];
 
 export default function PlaceList() {
+  const [selectedPlace, setselectedPlace] = useState(null);
+  const [open, setIsOpen] = useState(false);
+
+  function handleButtonClick(place) {
+    setselectedPlace(place);
+    setIsOpen(!open);
+    console.log("cliqué");
+  }
   return (
-    <div className="center-container">
-      <div className="place-list">
-        {placesData.map((places) => (
-          <div key={places.id} className="place-item">
-            {/* Affiche le composant PlaceDetail avec les props appropriées */}
-
-            <h2 className="text-center p-3">{places.name}</h2>
-
-            <img src={places.imageUrl} alt={places.name} />
-            <p className="paragrapheDescription">{places.description}</p>
-            <div className="btnInfos">
-              <Link>
-                <button className="btnDetail">En savoir plus</button>
-              </Link>
-            </div>
-          </div>
-        ))}
+    <>
+      <div className="center-container">
+        <div className="place-list">
+          {placesData.map(
+            (
+              place // Utilise le nom de variable place pour chaque élément
+            ) => (
+              <div key={place.id} className="place-item">
+                <h2 className="text-center p-3">{place.name}</h2>
+                <img src={place.imageUrl} alt={place.name} />
+                <p className="paragrapheDescription">{place.description}</p>
+                <div className="btnInfos">
+                  <button
+                    onClick={() => handleButtonClick(place)}
+                    className="btnDetail"
+                  >
+                    {" "}
+                    {/* Passer place ici */}
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+        {open &&
+          selectedPlace && ( // Affiche le modal si ouvert et que selectedPlace a une valeur
+            <Modal
+              name={selectedPlace.name}
+              description={selectedPlace.description}
+              image={selectedPlace.imageUrl}
+              isOpen={open}
+              onClose={() => setIsOpen(false)} // Méthode pour fermer le modal
+            />
+          )}
       </div>
-    </div>
+    </>
   );
 }

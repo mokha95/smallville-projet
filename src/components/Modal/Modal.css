@@ -1,0 +1,47 @@
+/* Modal.css */
+
+.modal-overlay {
+    position: fixed; /* Positionnement fixe pour couvrir tout l'écran */
+    top: 0; /* Aligner le haut à 0 pour couvrir tout l'écran */
+    left: 0; /* Aligner la gauche à 0 pour couvrir tout l'écran */
+    right: 0; /* Alignement à droite à 0 pour couvrir tout l'écran */
+    bottom: 0; /* Alignement en bas à 0 pour couvrir tout l'écran */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent noir */
+    display: flex; /* Flexbox pour centrer le contenu */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    z-index: 1000; /* Assurer que la modale est au-dessus du contenu */
+  }
+  
+  .modal-content {
+    background-color: white; /* Fond blanc pour le contenu de la modale */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    max-width: 500px; /* Largeur maximale de la modale */
+    width: 90%; /* Largeur de la modale par défaut */
+    text-align: center; /* Centre le texte dans la modale */
+  }
+  
+  .modal-image {
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur de la modale */
+    height: auto; /* Maintient les proportions de l'image */
+    margin: 10px 0; /* Marge autour de l'image */
+  }
+  
+
+  .close-button {
+    background-color: red;  /* Couleur de fond rouge */
+    color: white;           /* Couleur du texte en blanc */
+    border: none;           /* Pas de bordure */
+    border-radius: 5px;    /* Coins arrondis */
+    padding: 10px 15px;     /* Espacement interne */
+    cursor: pointer;        /* Curseur de la souris en forme de main */
+    font-size: 16px;       /* Taille de la police */
+    transition: background-color 0.3s;  /* Transition pour l'effet au survol */
+  }
+  
+  .close-button:hover {
+    background-color: darkred;  /* Couleur de fond plus foncée au survol */
+  }
+  
