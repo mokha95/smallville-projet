@@ -82,3 +82,29 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Thème clair */
+/* Thème clair */
+.light {
+  color: #fff; /* couleur du texte clair */
+}
+
+/* Thème sombre */
+.yellow {
+  color: #e19500; /* couleur du texte sombre */
+}
+
+/* Transition douce entre les thèmes */
+body,
+button {
+  transition: color 0.3s;
+}
+
+.btnChange {
+  color: #f1f1f1;
+  padding: 15px;
+  border: none;
+  background: #e19500;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
