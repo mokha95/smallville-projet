@@ -24,6 +24,7 @@ import Footer from "./components/Footer/Footer";
 import Films from "./components/Films/Films";
 import themeContext from "./context/ThemeContext";
 import { useState } from "react";
+import FilmsDetails from "./components/FilmDetails/FilmsDetails";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -58,6 +59,7 @@ function App() {
             <Route path="/place/:id" Component={PlaceDetail} />
             <Route path="Boutique" Component={Boutique} />
             <Route path="Films" Component={Films} />
+            <Route path="/films/:id" Component={FilmsDetails} />
             <Route path="*" element={<ErrorPage />} />
 
             {/* Ajoutez les autres routes ici */}
