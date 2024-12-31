@@ -98,3 +98,5 @@ Gestion des stocks :
 
 Ajoutez un système simple de gestion des stocks.
 Affichez un message quand un produit n'est plus disponible.
+
+realiser un lien de redirection la ou on voit la fiche complete du films et les acteurs avec un systemes de notations d etoiles

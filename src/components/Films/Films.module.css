@@ -3,8 +3,17 @@
   height: 200px;
   width: 900px;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover; /* Pour que l'image s'adapte bien */
   margin: 0 auto;
+}
+
+.blocImgFilms {
+  /* Applique un alignement de type grille */
+  display: flex;
+  flex-direction: column; /* Alignement des éléments en colonne */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacement entre les images */
 }
 
 .trait1 {
@@ -12,13 +21,29 @@
   margin: 0 auto;
 }
 
-.supermanCard{
-
-width: 500px;
-    margin: 0 auto;
+.supermanCard {
+  /* Utilisation de flexbox ou d'une grille pour aligner les films */
+  display: grid; /* Utilisation de la grille */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Crée une grille avec des colonnes flexibles */
+  gap: 20px; /* Espace entre les éléments */
+  width: 100%; /* Pour que la grille prenne toute la largeur disponible */
+  margin: 0 auto;
+  padding: 20px; /* Ajout d'un peu de padding autour de la grille */
 }
 
-.imgCard{
-  width: 150px;
-    height: 200px;
+.imgCard {
+  width: 100%; /* L'image prend toute la largeur du bloc */
+  height: 200px; /* Assure une taille constante pour les images */
+  object-fit: cover; /* Assure que l'image couvre la zone sans déformation */
+  border-radius: 10px; /* Bords arrondis pour un effet esthétique */
+}
+
+h5 {
+  margin-top: 10px; /* Espacement entre l'image et le titre */
+  text-align: center; /* Aligne le titre au centre */
+  color: #fff; /* Assure que le texte est bien visible sur le fond sombre */
+  font-size: 14px; /* Ajuste la taille du titre */
 }
