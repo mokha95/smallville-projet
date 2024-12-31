@@ -22,35 +22,50 @@ import Entrainement from "./components/Entrainement/Entrainement";
 import Accueil from "./components/Accueil/Accueil";
 import Footer from "./components/Footer/Footer";
 import Films from "./components/Films/Films";
+import themeContext from "./context/ThemeContext";
+import { useState } from "react";
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <Navigation />
-        <Routes>
-          <Route exact path="/" Component={Accueil} />
-          <Route exact path="/Accueil" Component={Accueil} />
-          <Route exact path="/Home" Component={Home} />
-          <Route path="/CommentsSection" Component={CommentsSection} />
-          <Route path="/CharacterProfile" Component={CharacterProfile} />
-          <Route path="/EpisodeDetails" Component={EpisodeDetails} />
-          <Route path="/Season1" Component={Season1} />
-          <Route path="/Season2" Component={Season2} />
-          <Route path="/Season3" Component={Season3} />
-          <Route path="/Personnages" Component={Personnages} />
-          <Route path="/PlaceList" Component={PlaceList} />
-          {/* <Route path="/PlaceDetail" Component={PlaceDetail} /> */}
-          <Route path="/place/:id" Component={PlaceDetail} />
-          <Route path="Boutique" Component={Boutique} />
-          <Route path="Films" Component={Films} />
-          <Route path="*" element={<ErrorPage />} />
+  const [theme, setTheme] = useState("light");
 
-          {/* Ajoutez les autres routes ici */}
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
+  function handleClickTheme() {
+    setTheme((prevTheme) => (prevTheme === "light" ? "yellow" : "light"));
+    console.log(theme);
+  }
+  return (
+    <themeContext.Provider value={theme}>
+      <Router>
+        <div className={theme}>
+          <Navigation />
+          <div className="blocChange text-center">
+            <button onClick={handleClickTheme} className="btnChange">
+              Change la couleur du texte
+            </button>
+          </div>
+          <Routes>
+            <Route exact path="/" Component={Accueil} />
+            <Route exact path="/Accueil" Component={Accueil} />
+            <Route exact path="/Home" Component={Home} />
+            <Route path="/CommentsSection" Component={CommentsSection} />
+            <Route path="/CharacterProfile" Component={CharacterProfile} />
+            <Route path="/EpisodeDetails" Component={EpisodeDetails} />
+            <Route path="/Season1" Component={Season1} />
+            <Route path="/Season2" Component={Season2} />
+            <Route path="/Season3" Component={Season3} />
+            <Route path="/Personnages" Component={Personnages} />
+            <Route path="/PlaceList" Component={PlaceList} />
+            {/* <Route path="/PlaceDetail" Component={PlaceDetail} /> */}
+            <Route path="/place/:id" Component={PlaceDetail} />
+            <Route path="Boutique" Component={Boutique} />
+            <Route path="Films" Component={Films} />
+            <Route path="*" element={<ErrorPage />} />
+
+            {/* Ajoutez les autres routes ici */}
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </themeContext.Provider>
   );
 }
 
