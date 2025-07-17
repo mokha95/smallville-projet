@@ -12,7 +12,7 @@ function Season3() {
         total de 23 épisodes.
       </p>
 
-      <div className="saison1">
+      <div className="saison1  ">
         <img src={season3Image} alt="Saison 3" />
       </div>
 

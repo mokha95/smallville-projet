@@ -244,7 +244,7 @@ export default function Boutique() {
     setTimeout(() => {
       setArticles(articlesList); // Mettre à jour l'état des articles
       setLoading(false); // Indiquer que le chargement est terminé
-    }, 3000); // Utilise 2000 millisecondes pour simuler le délai de chargement
+    }, 1000); // Utilise 2000 millisecondes pour simuler le délai de chargement
   }, []);
 
   // Fonction de gestion des entrées de l'utilisateur dans le champ de recherche
