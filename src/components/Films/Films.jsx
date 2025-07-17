@@ -23,18 +23,18 @@ export default function Films() {
 
   return (
     <div className="container my-4">
-      {/* Barre de recherche */}
-      <div className="input-group mb-4">
+      {/* Barre de recherche dans un formulaire */}
+      <form className="input-group mb-4">
         <input
           type="text"
           className="form-control"
           placeholder="Rechercher un film Superman..."
           aria-label="Recherche de films"
         />
-        <button className="btn btn-primary" type="button">
+        <button className="btn btn-primary" type="submit">
           Rechercher
         </button>
-      </div>
+      </form>
 
       {/* Grille des films */}
       <div className="row">
@@ -47,16 +47,7 @@ export default function Films() {
                   src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
                   alt={film.title}
                 />
-              ) : (
-                <div
-                  className="card-img-top bg-secondary d-flex align-items-center justify-content-center"
-                  style={{ height: "400px" }}
-                >
-                  <span className="text-white">
-                    Pas d&apos;affiche disponible
-                  </span>
-                </div>
-              )}
+              ) : null}
 
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title text-center text-info">
@@ -87,7 +78,7 @@ export default function Films() {
                 </p>
 
                 <div>
-                  <button className="btn btn-primary btn-sm mt-3">
+                  <button className="btn btn-danger btn-sm mt-3 w-75">
                     ❤️ Ajouter au coup de cœur
                   </button>
                 </div>
