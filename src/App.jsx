@@ -59,7 +59,7 @@ function App() {
             <Route path="/place/:id" Component={PlaceDetail} />
             <Route path="Boutique" Component={Boutique} />
             <Route path="Films" Component={Films} />
-            <Route path="/films/:id" Component={FilmsDetails} />
+            <Route path="/films/:id/:title?" Component={FilmsDetails} />
             <Route path="*" element={<ErrorPage />} />
 
             {/* Ajoutez les autres routes ici */}

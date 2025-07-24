@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 const apiKey = import.meta.env.VITE_TMDB_API_KEY;
 
@@ -43,16 +44,18 @@ export default function Films() {
             <div className="card h-100 bg-dark text-light shadow-sm d-flex flex-column">
               {film.poster_path ? (
                 <img
-                  className="card-img-top"
+                  className="card-img-top  cursor-pointer"
                   src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
                   alt={film.title}
                 />
               ) : null}
 
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title text-center text-info">
-                  {film.title}
-                </h5>
+                <Link to={`/films/${film.id}/${film.title}`}>
+                  <h5 className="card-title text-center text-info">
+                    {film.title}
+                  </h5>
+                </Link>
                 <p className="mb-1">
                   <strong className="text-warning">Sortie :</strong>{" "}
                   {film.release_date || "Date inconnue"}
@@ -78,7 +81,7 @@ export default function Films() {
                 </p>
 
                 <div>
-                  <button className="btn btn-danger btn-sm mt-3 w-75">
+                  <button className="btn btn-primary btn-sm mt-3 w-75 ">
                     ❤️ Ajouter au coup de cœur
                   </button>
                 </div>
