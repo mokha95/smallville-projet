@@ -28,3 +28,7 @@
 .navigation-link:hover {
   text-decoration: underline;
 }
+
+.liensConnect {
+  margin-left: 100px;
+}

@@ -118,23 +118,27 @@ const persoSmallville = [
 function Accueil() {
   return (
     <>
-      <div className="AccueilBloc">
-        <p className="AccueilSmallville">Accueil</p>
+      <div className="AccueilBloc container">
+        {/* <p className="AccueilSmallville">Accueil</p> */}
 
-        <Link className="Liens1">
-          Bienvenue A Smallville , capitale des Meteorites !
-        </Link>
-        <div className="border1">
-          <p className="textSmallville pt-3 pb-5 ">
-            Après qu&apos; une pluie de météorites se soit abattue sur
-            Smallville, une petite bourgade du Kansas, un couple
-            d&apos;agriculteur, Jonathan et Martha Kent adoptent un enfant et
-            l&apos;élève comme leur propre fils. Douze ans plus tard, Clark
-            Kent, devenu un jeune homme, fait la connaissance de Lex Luthor, un
-            jeune milliardaire qui vient d&apos;emménager en ville, puis
-            découvre ses véritables origines qui feront de lui un
-            être...extraordinaire.
+        <Link className="Liens1 d-block text-center">
+          <p className="titreSmallville m-0 p-2 fs-4 fs-md-3">
+            Bienvenue A Smallville , capitale des Meteorites !
           </p>
+        </Link>
+        <div className="border bloc1 border-warning p-3 p-md-4">
+          <div className="blocText">
+            <p className="pt-3 pb-5 mb-0 fs-6 fs-md-5 text-justify textSmallville">
+              Après qu&apos; une pluie de météorites se soit abattue sur
+              Smallville, une petite bourgade du Kansas, un couple
+              d&apos;agriculteur, Jonathan et Martha Kent adoptent un enfant et
+              l&apos;élève comme leur propre fils. Douze ans plus tard, Clark
+              Kent, devenu un jeune homme, fait la connaissance de Lex Luthor,
+              un jeune milliardaire qui vient d&apos;emménager en ville, puis
+              découvre ses véritables origines qui feront de lui un
+              être...extraordinaire.
+            </p>
+          </div>
         </div>
         <Carousel className="mt-5">
           {/*image 1  */}
@@ -179,7 +183,11 @@ function Accueil() {
           {persoSmallville.map((perso) => (
             <div key={perso.id} className="personnage">
               <div className="persoCard">
-                <img className="m-1" src={perso.imageUrl} alt={perso.prenom} />
+                <img
+                  className="m-1 img-fluid"
+                  src={perso.imageUrl}
+                  alt={perso.prenom}
+                />
                 <p>
                   {" "}
                   <button className="btnNom"> {perso.prenom} </button>

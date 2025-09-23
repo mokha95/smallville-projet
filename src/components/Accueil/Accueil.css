@@ -64,27 +64,57 @@
 .personnages {
   display: flex;
   flex-wrap: wrap;
- 
 }
 
-.persoCard{
+.persoCard {
   border: 2px solid #1c302e;
   margin: 2px;
 }
 
-.persoCard button{
+.persoCard button {
   text-align: center;
   font-size: 12px;
 }
-.persoCard p{
+.persoCard p {
   text-align: center;
 }
-.btnNom{
+.btnNom {
   color: #879f9f;
   font-size: x-small;
-padding: 0 5px;
+  padding: 0 5px;
   background: #1c302e;
   border-radius: 5px 0;
   font-weight: bold;
   border: none;
+}
+
+@media screen and (max-width: 606px) {
+  .titreSmallville {
+    font-size: 14px;
+  }
+  .textSmallville {
+    font-size: 14px;
+  }
+
+  .bloc1 {
+    max-width: 450px;
+  }
+  /* .blocText {
+    width: 70%;
+  } */
+}
+@media screen and (max-width: 450px) {
+  .bloc1 {
+    display: none;
+  }
+  .textSmallville {
+    font-size: 10px;
+  }
+
+  .bloc1 {
+    max-width: 290px;
+  }
+  /* .blocText {
+    width: 70%;
+  } */
 }

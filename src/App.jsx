@@ -25,6 +25,8 @@ import Films from "./components/Films/Films";
 import themeContext from "./context/ThemeContext";
 import { useState } from "react";
 import FilmsDetails from "./components/FilmDetails/FilmsDetails";
+import Signin from "./components/Signin/Signin";
+import Signup from "./components/Signup/Signup";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -45,6 +47,7 @@ function App() {
           </div>
           <Routes>
             <Route exact path="/" Component={Accueil} />
+
             <Route exact path="/Accueil" Component={Accueil} />
             <Route exact path="/Home" Component={Home} />
             <Route path="/CommentsSection" Component={CommentsSection} />
@@ -60,6 +63,8 @@ function App() {
             <Route path="Boutique" Component={Boutique} />
             <Route path="Films" Component={Films} />
             <Route path="/films/:id/:title?" Component={FilmsDetails} />
+            <Route exact path="/Signup" Component={Signup} />
+            <Route exact path="/Signin" Component={Signin} />
             <Route path="*" element={<ErrorPage />} />
 
             {/* Ajoutez les autres routes ici */}
