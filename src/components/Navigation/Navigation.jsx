@@ -55,14 +55,14 @@ const Navigation = () => {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="liensConnect">
-          <Link className="navbar-brand" to="/Signup">
-            Inscription
-          </Link>
-          <Link className="navbar-brand" to="/Signin">
-            Connexion
-          </Link>
+          <div className="liensConnect ms-lg-auto">
+            <Link className="nav-auth-link nav-auth-primary" to="/Signup">
+              Inscription
+            </Link>
+            <Link className="nav-auth-link" to="/Signin">
+              Connexion
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

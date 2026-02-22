@@ -2,7 +2,7 @@ import React from "react";
 import "./SeasonsList.css";
 import season1Image from "../../assets/img/smallville-saison-1.1.jpg"; // Importez l'image de la saison 1
 import season2Image from "../../assets/img/smallville-saison-3-.jpg"; // Importez l'image de la saison 2
-import season3Image from "../../assets/img/smallville-saison-1.jpg"; // Importez l'image de la saison 2
+import season3Image from "../../assets/img/smallville-saison-3.jpg"; // Importez l'image de la saison 3
 import season4Image from "../../assets/img/smallville-saison-4.jpg"; // Importez l'image de la saison 2
 import season5Image from "../../assets/img/smallville-saison-5.jpg"; // Importez l'image de la saison 2
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ function SeasonsList() {
         <Link to="/Season4">
           <li className="season">
             <h3>Saison 4</h3>
-            <img src={season1Image} alt="Saison 4" />{" "}
+            <img src={season4Image} alt="Saison 4" />{" "}
           </li>
         </Link>
         <Link to="/Season5">

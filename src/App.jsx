@@ -13,6 +13,8 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Season1 from "./components/Season1/Season1";
 import Season3 from "./components/Season3/Season3";
 import Season2 from "./components/Season2/Season2";
+import Season4 from "./components/Season4/Season4";
+import Season5 from "./components/Season5/Season5";
 import Navigation from "./components/Navigation/Navigation";
 import Personnages from "./components/Personnages/Personnages";
 import PlaceList from "./components/PlaceList/PlaceList";
@@ -27,8 +29,14 @@ import { useState } from "react";
 import FilmsDetails from "./components/FilmDetails/FilmsDetails";
 import Signin from "./components/Signin/Signin";
 import Signup from "./components/Signup/Signup";
+import FichePersonnage from "./components/FichePersonnage/FichePersonnage";
 
 function App() {
+  // async function test() {
+  //   const response = await fetch("/api/test");
+  //   console.log(await response.json());
+  // }
+  // test();
   const [theme, setTheme] = useState("light");
 
   function handleClickTheme() {
@@ -56,6 +64,8 @@ function App() {
             <Route path="/Season1" Component={Season1} />
             <Route path="/Season2" Component={Season2} />
             <Route path="/Season3" Component={Season3} />
+            <Route path="/Season4" Component={Season4} />
+            <Route path="/Season5" Component={Season5} />
             <Route path="/Personnages" Component={Personnages} />
             <Route path="/PlaceList" Component={PlaceList} />
             {/* <Route path="/PlaceDetail" Component={PlaceDetail} /> */}
@@ -65,6 +75,11 @@ function App() {
             <Route path="/films/:id/:title?" Component={FilmsDetails} />
             <Route exact path="/Signup" Component={Signup} />
             <Route exact path="/Signin" Component={Signin} />
+            <Route
+              exact
+              path="/fichePersonnage/:id"
+              Component={FichePersonnage}
+            />
             <Route path="*" element={<ErrorPage />} />
 
             {/* Ajoutez les autres routes ici */}

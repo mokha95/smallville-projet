@@ -1,10 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import "./Signup.css";
 import { createUser } from "../../apis/users";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // composant Inscription
 export default function Signup() {
@@ -44,76 +44,91 @@ export default function Signup() {
   const submit = handleSubmit(async (credentials) => {
     console.log(credentials);
     try {
-      const user = await createUser(credentials);
-      // navigate("/signin");
+      await createUser(credentials);
+      navigate("/Signin");
       clearErrors();
     } catch (message) {
-      setError("gneric", { type: "generic", message });
+      setError("generic", { type: "generic", message });
     }
   });
 
   return (
-    <div className="text-center p-4 text-white">
-      <form onSubmit={submit}>
-        <div className="d-flex flex-column justify-content-center align-items-center mb-4">
-          {" "}
-          {/* Ajout de d-flex et align-items-center */}
-          <h2>Inscription</h2>
-          <label htmlFor="name" className="form-label">
-            Nom
-          </label>
-          <input
-            type="text"
-            className="form-control inputForm"
-            {...register("name")}
-          />
-          {errors.name && (
-            <p className="text-danger mt-2">{errors.name.message}</p>
-          )}
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-header">
+          <h2 className="auth-title">Inscription</h2>
+          <p className="auth-subtitle">
+            Rejoignez la communauté Smallville et créez votre compte.
+          </p>
         </div>
+        <form onSubmit={submit} className="auth-form">
+          <div className="auth-field">
+            <label htmlFor="name" className="auth-label">
+              Nom
+            </label>
+            <input
+              id="name"
+              type="text"
+              className="auth-input"
+              placeholder="Votre nom"
+              autoComplete="name"
+              {...register("name")}
+            />
+            {errors.name && <p className="auth-error">{errors.name.message}</p>}
+          </div>
 
-        <div className="d-flex flex-column justify-content-center align-items-center mb-4">
-          {" "}
-          {/* Appliqué à toutes les divs */}
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="text"
-            className="form-control inputForm"
-            {...register("email")}
-          />
-          {errors.email && (
-            <p className="text-danger mt-2">{errors.email.message}</p>
-          )}
-        </div>
+          <div className="auth-field">
+            <label htmlFor="email" className="auth-label">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              className="auth-input"
+              placeholder="vous@exemple.com"
+              autoComplete="email"
+              {...register("email")}
+            />
+            {errors.email && (
+              <p className="auth-error">{errors.email.message}</p>
+            )}
+          </div>
 
-        <div className="d-flex flex-column justify-content-center align-items-center mb-4">
-          {" "}
-          {/* Appliqué à toutes les divs */}
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control inputForm"
-            {...register("password")}
-          />
-          {errors.password && (
-            <p className="text-danger mt-2">{errors.password.message}</p>
+          <div className="auth-field">
+            <label htmlFor="password" className="auth-label">
+              Mot de passe
+            </label>
+            <input
+              id="password"
+              type="password"
+              className="auth-input"
+              placeholder="Au moins 6 caractères"
+              autoComplete="new-password"
+              {...register("password")}
+            />
+            {errors.password && (
+              <p className="auth-error">{errors.password.message}</p>
+            )}
+          </div>
+
+          {errors.generic && (
+            <p className="auth-error auth-error-block">
+              {errors.generic.message}
+            </p>
           )}
-        </div>
-        {errors.generic && (
-          <p className="text-danger">{errors.password.message}</p>
-        )}
-        <div className="d-flex justify-content-center">
-          {" "}
-          {/* Pour centrer le bouton */}
-          <button disabled={isSubmitting} className="btn btn-primary">
-            Inscription
+
+          <button disabled={isSubmitting} className="auth-button">
+            Créer mon compte
           </button>
-        </div>
-      </form>
+
+          <p className="auth-footer">
+            Déjà un compte ?{" "}
+            <Link className="auth-link" to="/Signin">
+              Connexion
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }

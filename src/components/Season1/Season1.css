@@ -1,39 +1,95 @@
 .season-container {
-  /* max-width: 800px;
-  margin: 0 auto; */
-  padding: 20px;
-  background-color: #1a1c2c;
-  color: #fff; /* Couleur du texte */
-  height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  color: #f5f7ff;
+}
+
+.season-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .season-title {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  color: #e19500;
+  letter-spacing: 1px;
 }
 
-.saison1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  /* justify-content: center; */
+.season-meta {
+  color: #c8cbe0;
+  line-height: 1.6;
+  max-width: 900px;
 }
 
-.saison1 img {
-  width: 450px;
-  height: auto;
-  margin-right: 20px;
+.season-hero {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(220px, 420px) 1fr;
+  gap: 28px;
+  background: #20243a;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
-.infos {
-  font-size: 18px;
+.season-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.infos h3 {
-  margin-top: 20px;
+.season-highlights {
+  color: #e9ebf7;
+  line-height: 1.7;
 }
 
-.infos p {
-  margin-bottom: 20px;
+.season-list {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: #c8cbe0;
+}
+
+.season-section {
+  margin-top: 28px;
+  background: #1a1e33;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.season-section h3 {
+  color: #e19500;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.season-section p {
+  color: #dde0f3;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .season-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .season-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .season-container {
+    padding: 36px 24px 64px;
+  }
+
+  .season-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .season-image {
+    max-height: 360px;
+  }
 }

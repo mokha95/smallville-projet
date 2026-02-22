@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import image1 from "../../assets/img/slider/superman1.webp";
 import image2 from "../../assets/img/slider/supermanFurieux.webp";
 import image3 from "../../assets/img/slider/supermanVol.jpg";
 import imageSmallville from "../../assets/img/lieux/smallville city.jpg";
 import chloe from "../../assets/img/PersonnageProfil/Chlo%3F_Sullivan.webp";
 import kent from "../../assets/img/PersonnageProfil/Clark_Kent.webp";
-import clark from "../../assets/img/PersonnageProfil/Chlo%3F_Sullivan.webp";
 import davis from "../../assets/img/PersonnageProfil/Davis_Bloome.webp";
 import jasonTeague from "../../assets/img/PersonnageProfil/Jason_Teague.webp";
 import jimmyOlsen from "../../assets/img/PersonnageProfil/Jimmy_Olsen.webp";
@@ -27,95 +25,26 @@ import KaralaplusBelle from "../../assets/img/PersonnageProfil/Kara_Kent.webp";
 import "./Accueil.css"; // Ajout du fichier CSS pour les styles personnalisés
 import AllSeasons from "../AllSeasons/AllSeasons";
 
-const persoSmallville = [
-  {
-    id: 1,
-    prenom: "clark kent",
-    imageUrl: kent,
-  },
-  {
-    id: 2,
-    prenom: "davis",
-    imageUrl: davis,
-  },
-  {
-    id: 3,
-    prenom: "jason Teague",
-    imageUrl: jasonTeague,
-  },
-  {
-    id: 4,
-    prenom: "jimmy Olsen",
-    imageUrl: jimmyOlsen,
-  },
-  {
-    id: 5,
-    prenom: "chloe",
-    imageUrl: chloe,
-  },
-  {
-    id: 6,
-    prenom: "Lana",
-    imageUrl: Lana,
-  },
-  {
-    id: 7,
-    prenom: "Lex",
-    imageUrl: Lex,
-  },
-  {
-    id: 8,
-    prenom: "jonathan kent",
-    imageUrl: jonathanKent,
-  },
-  {
-    id: 9,
-    prenom: "Lionel Luthor",
-    imageUrl: Lionel,
-  },
-  {
-    id: 10,
-    prenom: "Lois Lane",
-    imageUrl: Lois,
-  },
-  {
-    id: 11,
-    prenom: "Martha",
-    imageUrl: Martha,
-  },
-  {
-    id: 12,
-    prenom: "Oliver queen",
-    imageUrl: Oliver,
-  },
-  {
-    id: 13,
-    prenom: "Pete Ross",
-    imageUrl: PeteRoss,
-  },
-  {
-    id: 14,
-    prenom: "Tess",
-    imageUrl: Tess,
-  },
-  {
-    id: 15,
-    prenom: "whitney",
-    imageUrl: whitney,
-  },
-  {
-    id: 16,
-    prenom: "Zod",
-    imageUrl: Zod,
-  },
-  {
-    id: 17,
-    prenom: "Kara Kent",
-    imageUrl: KaralaplusBelle,
-  },
-];
-
 function Accueil() {
+  const persoSmallville = [
+    { id: 1, prenom: "clark kent", imageUrl: kent },
+    { id: 2, prenom: "davis", imageUrl: davis },
+    { id: 3, prenom: "jason Teague", imageUrl: jasonTeague },
+    { id: 4, prenom: "jimmy Olsen", imageUrl: jimmyOlsen },
+    { id: 5, prenom: "chloe", imageUrl: chloe },
+    { id: 6, prenom: "Lana", imageUrl: Lana },
+    { id: 7, prenom: "Lex", imageUrl: Lex },
+    { id: 8, prenom: "jonathan kent", imageUrl: jonathanKent },
+    { id: 9, prenom: "Lionel Luthor", imageUrl: Lionel },
+    { id: 10, prenom: "Lois Lane", imageUrl: Lois },
+    { id: 11, prenom: "Martha", imageUrl: Martha },
+    { id: 12, prenom: "Oliver queen", imageUrl: Oliver },
+    { id: 13, prenom: "Pete Ross", imageUrl: PeteRoss },
+    { id: 14, prenom: "Tess", imageUrl: Tess },
+    { id: 15, prenom: "whitney", imageUrl: whitney },
+    { id: 16, prenom: "Zod", imageUrl: Zod },
+    { id: 17, prenom: "Kara Kent", imageUrl: KaralaplusBelle },
+  ];
   return (
     <>
       <div className="AccueilBloc container">
@@ -183,15 +112,17 @@ function Accueil() {
           {persoSmallville.map((perso) => (
             <div key={perso.id} className="personnage">
               <div className="persoCard">
-                <img
-                  className="m-1 img-fluid"
-                  src={perso.imageUrl}
-                  alt={perso.prenom}
-                />
-                <p>
-                  {" "}
-                  <button className="btnNom"> {perso.prenom} </button>
-                </p>
+                <Link to={`/fichePersonnage/${perso.id}`}>
+                  <img
+                    className="m-1 img-fluid"
+                    src={perso.imageUrl}
+                    alt={perso.prenom}
+                  />
+                  <p>
+                    {" "}
+                    <button className="btnNom"> {perso.prenom} </button>
+                  </p>
+                </Link>
               </div>
             </div>
           ))}

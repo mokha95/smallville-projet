@@ -6,26 +6,37 @@ import "./Season2.css";
 function Season2() {
   return (
     <div className="season-container">
-      <h1 className="season-title">Saison 2</h1>
-      <p>
-        La deuxième saison de Smallville a été diffusée pour la première fois le
-        24 septembre 2002 et s'&apos;est terminée le 20 mai 2003, comprenant un
-        total de 23 épisodes.
-      </p>
-
-      <div className="saison1">
-        <img src={season2Image} alt="Saison 2" />
-      </div>
-
-      <div className="infos">
-        <h3 id="Synopsis">Synopsis</h3>
-        <p>
-          Dans cette saison, Clark Kent continue de découvrir et de développer
-          ses pouvoirs alors qu'il affronte de nouveaux défis et dangers à
-          Smallville. Il doit jongler avec ses responsabilités en tant que héros
-          naissant tout en essayant de mener une vie normale d'adolescent.
+      <div className="season-header">
+        <h1 className="season-title">Saison 2</h1>
+        <p className="season-meta">
+          Diffusée du 24 septembre 2002 au 20 mai 2003 • 23 épisodes.
         </p>
       </div>
+
+      <div className="season-hero">
+        <img className="season-image" src={season2Image} alt="Saison 2" />
+        <div className="season-highlights">
+          <p>
+            Cette saison approfondit les secrets de Smallville et les liens
+            entre Clark, Lana et Lex, avec l&apos;introduction de nouvelles
+            menaces.
+          </p>
+          <ul className="season-list">
+            <li>Les grottes Kawatche et leur prophétie.</li>
+            <li>L&apos;ombre grandissante de Lionel Luthor.</li>
+            <li>Les pouvoirs de Clark se développent.</li>
+          </ul>
+        </div>
+      </div>
+
+      <section className="season-section">
+        <h3>Synopsis</h3>
+        <p>
+          Clark poursuit son apprentissage tout en protégeant ses proches. Les
+          secrets des Kawatche révèlent un destin plus vaste, tandis que les
+          tensions avec la famille Luthor s&apos;intensifient.
+        </p>
+      </section>
     </div>
   );
 }

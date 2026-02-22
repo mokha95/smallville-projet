@@ -91,17 +91,6 @@
   box-shadow: 0 0 0 3px rgba(225, 149, 0, 0.2);
 }
 
-.auth-error {
-  color: #ffb6b6;
-  font-size: 13px;
-}
-
-.auth-error-block {
-  background: rgba(255, 182, 182, 0.1);
-  padding: 10px 12px;
-  border-radius: 10px;
-}
-
 .auth-button {
   background: linear-gradient(135deg, #e19500, #f5b348);
   border: none;
@@ -117,12 +106,7 @@
     box-shadow 0.2s ease;
 }
 
-.auth-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.auth-button:not(:disabled):hover {
+.auth-button:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(225, 149, 0, 0.25);
 }
@@ -131,7 +115,7 @@
   text-align: center;
   color: #c8cbe0;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 
 .auth-link {
