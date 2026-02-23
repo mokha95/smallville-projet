@@ -10,11 +10,6 @@ import Quiz from "./components/Quiz/Quiz";
 import CommentsSection from "./components/CommentsSection/CommentsSection";
 import Home from "./components/Home/Home";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
-import Season1 from "./components/Season1/Season1";
-import Season3 from "./components/Season3/Season3";
-import Season2 from "./components/Season2/Season2";
-import Season4 from "./components/Season4/Season4";
-import Season5 from "./components/Season5/Season5";
 import Navigation from "./components/Navigation/Navigation";
 import Personnages from "./components/Personnages/Personnages";
 import PlaceList from "./components/PlaceList/PlaceList";
@@ -30,7 +25,7 @@ import FilmsDetails from "./components/FilmDetails/FilmsDetails";
 import Signin from "./components/Signin/Signin";
 import Signup from "./components/Signup/Signup";
 import FichePersonnage from "./components/FichePersonnage/FichePersonnage";
-
+import SeasonDetails from "./components/SeasonDetails/SeasonDetails";
 function App() {
   // async function test() {
   //   const response = await fetch("/api/test");
@@ -61,11 +56,6 @@ function App() {
             <Route path="/CommentsSection" Component={CommentsSection} />
             <Route path="/CharacterProfile" Component={CharacterProfile} />
             <Route path="/EpisodeDetails" Component={EpisodeDetails} />
-            <Route path="/Season1" Component={Season1} />
-            <Route path="/Season2" Component={Season2} />
-            <Route path="/Season3" Component={Season3} />
-            <Route path="/Season4" Component={Season4} />
-            <Route path="/Season5" Component={Season5} />
             <Route path="/Personnages" Component={Personnages} />
             <Route path="/PlaceList" Component={PlaceList} />
             {/* <Route path="/PlaceDetail" Component={PlaceDetail} /> */}
@@ -80,6 +70,7 @@ function App() {
               path="/fichePersonnage/:id"
               Component={FichePersonnage}
             />
+            <Route exact path="/season/:id" Component={SeasonDetails} />
             <Route path="*" element={<ErrorPage />} />
 
             {/* Ajoutez les autres routes ici */}
