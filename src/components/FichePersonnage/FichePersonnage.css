@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: minmax(220px, 360px) 1fr;
   gap: 28px;
+  align-items: start;
   background: linear-gradient(135deg, #1d2034, #20243a);
   border-radius: 22px;
   padding: 24px;
@@ -18,8 +19,12 @@
 
 .fiche-image {
   width: 100%;
+  height: auto;
+  max-height: 520px;
+  display: block;
   border-radius: 14px;
-  object-fit: cover;
+  object-fit: contain;
+  background: rgba(10, 12, 24, 0.35);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
