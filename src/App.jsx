@@ -43,11 +43,13 @@ function App() {
       <Router>
         <div className={theme}>
           <Navigation />
+          {/*
           <div className="blocChange text-center">
             <button onClick={handleClickTheme} className="btnChange">
               Change la couleur du texte
             </button>
           </div>
+          */}
           <Routes>
             <Route exact path="/" Component={Accueil} />
 
