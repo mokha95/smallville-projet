@@ -1,0 +1,8 @@
+Backend Smallville - Fonctionnalités actuelles
+
+Ce backend permet à un utilisateur de :
+- s'inscrire (création de compte)
+- se connecter (authentification)
+
+Objectif actuel : poser une base simple et fonctionnelle.
+D'autres fonctionnalités backend seront ajoutées plus tard (profil, sécurité, rôles, etc.).

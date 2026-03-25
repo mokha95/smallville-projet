@@ -14,7 +14,17 @@ import { useState } from "react";
 
 // placesData.js
 
+const smallvilleImg = require("../../assets/img/lieux/smallville ville.jpg");
+const smallvilleSerieImg = require("../../../public/images/persoSmallville/smallville.jpg");
+const trioImg = require("../../../public/images/persoSmallville/smallville-photo-tom-welling-allison-mack-1401548.jpg");
+
 const placesData = [
+  {
+    name: "Smallville - La série",
+    description: `"Smallville" est une série culte qui revisite la jeunesse de Clark Kent avant qu'il ne devienne Superman. À travers les aventures de Clark et de ses amis, la série explore l'amitié, les secrets, les choix difficiles et la découverte de soi dans une petite ville pleine de mystères. Portée par des personnages attachants et des intrigues mêlant fantastique, drame et romance, Smallville a marqué toute une génération de fans et reste une référence incontournable de l'univers des super-héros à la télévision.`,
+    imageUrl: smallvilleSerieImg,
+    id: 0,
+  },
   {
     name: "Smallville",
     description: `Smallville est bien plus qu'une simple petite ville rurale ; c'est un lieu emblématique et central dans la série, imprégné de mystères et de légendes. Au cœur de cette communauté se trouve une richesse de secrets et d'intrigues, chacun lié aux habitants et aux lieux qui façonnent l'histoire de la série. Pour Clark Kent, Smallville représente un terreau fertile où il découvre les vérités sur ses origines extraterrestres et les implications de ses pouvoirs surhumains.
@@ -24,6 +34,12 @@ const placesData = [
     La beauté de Smallville réside dans son ambiance rurale et authentique, combinée à une atmosphère imprégnée de secrets et de mystères qui inspirent les aventures et les révélations. Chaque épisode révèle un nouveau chapitre de cette ville mythique, offrant aux téléspectateurs un aperçu captivant de l'univers de Clark Kent et de son héritage extraterrestre.`,
     imageUrl: smallville2,
     id: 1,
+  },
+  {
+    name: "Clark Kent, Pete Ross et Chloé Sullivan",
+    description: `Clark Kent, Pete Ross et Chloé Sullivan incarnent l’amitié et la complicité au cœur de Smallville. Ensemble, ils traversent les épreuves du lycée, partagent des secrets et affrontent les mystères de la ville. Chloé, journaliste passionnée, soutient Clark dans sa quête de vérité, tandis que Pete, fidèle ami, l’accompagne dans ses aventures et protège ses secrets. Leur trio symbolise la force des liens humains face à l’extraordinaire, et rappelle que, même dans une ville pleine de mystères, l’amitié reste le plus grand des pouvoirs.`,
+    imageUrl: trioImg,
+    id: 100,
   },
 
   {
@@ -106,19 +122,6 @@ export default function PlaceList() {
                   </button>
                 </div>
               </div>
-              {/* Ajout du bloc Clark, Pete et Chloé juste après la première carte Smallville */}
-              {idx === 0 && (
-                <div className="place-item">
-                  <img
-                    src={process.env.PUBLIC_URL ? process.env.PUBLIC_URL + "/images/persoSmallville/smallville-photo-tom-welling-allison-mack-1401548.jpg" : "/images/persoSmallville/smallville-photo-tom-welling-allison-mack-1401548.jpg"}
-                    alt="Clark Kent, Pete Ross et Chloé Sullivan"
-                    style={{ width: "100%", borderRadius: "8px", marginBottom: "10px" }}
-                  />
-                  <p className="paragrapheDescription">
-                    <b>Clark Kent, Pete Ross et Chloé Sullivan</b> incarnent l’amitié et la complicité au cœur de Smallville. Ensemble, ils traversent les épreuves du lycée, partagent des secrets et affrontent les mystères de la ville. Chloé, journaliste passionnée, soutient Clark dans sa quête de vérité, tandis que Pete, fidèle ami, l’accompagne dans ses aventures et protège ses secrets. Leur trio symbolise la force des liens humains face à l’extraordinaire, et rappelle que, même dans une ville pleine de mystères, l’amitié reste le plus grand des pouvoirs.
-                  </p>
-                </div>
-              )}
             </React.Fragment>
           ))}
         </div>

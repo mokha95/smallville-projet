@@ -10,7 +10,7 @@ export default function Films() {
     async function fetchData() {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=superman&language=fr-FR`
+          `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=superman&language=fr-FR`,
         );
         const data = await response.json();
         setFilmsListe(data.results);
@@ -25,70 +25,58 @@ export default function Films() {
   return (
     <div className="container my-4">
       {/* Barre de recherche dans un formulaire */}
-      <form className="input-group mb-4">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Rechercher un film Superman..."
-          aria-label="Recherche de films"
-        />
-        <button className="btn btn-primary" type="submit">
-          Rechercher
-        </button>
-      </form>
-
-      {/* Grille des films */}
       <div className="row">
-        {filmsListe.map((film) => (
-          <div className="col-md-4 mb-4" key={film.id}>
-            <div className="card h-100 bg-dark text-light shadow-sm d-flex flex-column">
-              {film.poster_path ? (
+        {filmsListe
+          .filter((film) => film.poster_path)
+          .map((film) => (
+            <div className="col-md-4 mb-4" key={film.id}>
+              <div className="card h-100 bg-dark text-light shadow-sm d-flex flex-column">
                 <img
                   className="card-img-top  cursor-pointer"
                   src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
                   alt={film.title}
                 />
-              ) : null}
-
-              <div className="card-body d-flex flex-column">
-                <Link to={`/films/${film.id}/${film.title}`}>
-                  <h5 className="card-title text-center text-info">
-                    {film.title}
-                  </h5>
-                </Link>
-                <p className="mb-1">
-                  <strong className="text-warning">Sortie :</strong>{" "}
-                  {film.release_date || "Date inconnue"}
-                </p>
-                <p className="mb-2">
-                  <strong className="text-warning">Note :</strong>{" "}
-                  <span className="text-light fw-bold">
-                    {film.vote_average} ⭐
-                  </span>
-                </p>
-                <h6 className="text-primary mt-auto">Synopsis</h6>
-                <p
-                  className="text-light small"
-                  style={{
-                    display: "-webkit-box",
-                    WebkitLineClamp: 5,
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
+                <div className="card-body d-flex flex-column">
+                  <Link to={`/films/${film.id}/${film.title}`}>
+                    <h5 className="card-title text-center text-info">
+                      {film.title}
+                    </h5>
+                  </Link>
+                  <p className="mb-1">
+                    <strong className="text-warning">Sortie :</strong>{" "}
+                    {film.release_date || "Date inconnue"}
+                  </p>
+                  <p className="mb-2">
+                    <strong className="text-warning">Note :</strong>{" "}
+                    <span className="text-light fw-bold">
+                      {film.vote_average} ⭐
+                    </span>
+                  </p>
+                  <h6 className="text-primary mt-auto">Synopsis</h6>
+                  <p
+                    className="text-light small"
+                    style={{
+                      display: "-webkit-box",
+                      WebkitLineClamp: 5,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }}
+                  >
+                    {film.overview || "Aucun synopsis disponible."}
+                  </p>
+                </div>
+                <button
+                  className="btn btn-primary mt-2"
+                  onClick={() => {
+                    // Ajoutez ici la logique pour ajouter au coup de cœur
                   }}
                 >
-                  {film.overview || "Aucun synopsis disponible."}
-                </p>
-
-                <div>
-                  <button className="btn btn-primary btn-sm mt-3 w-75 ">
-                    ❤️ Ajouter au coup de cœur
-                  </button>
-                </div>
+                  ❤️ Ajouter au coup de cœur
+                </button>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );

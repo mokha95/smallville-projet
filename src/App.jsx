@@ -73,7 +73,7 @@ function App() {
               Component={FichePersonnage}
             />
             <Route exact path="/season/:id" Component={SeasonDetails} />
-            <Route path="*" element={<ErrorPage />} />
+            {/* <Route path="*" element={<ErrorPage />} /> */}
 
             {/* Ajoutez les autres routes ici */}
           </Routes>
