@@ -91,11 +91,9 @@ export default function PlaceList() {
     <>
       <div className="center-container">
         <div className="place-list">
-          {placesData.map(
-            (
-              place // Utilise le nom de variable place pour chaque élément
-            ) => (
-              <div key={place.id} className="place-item">
+          {placesData.map((place, idx) => (
+            <React.Fragment key={place.id || place.name}>
+              <div className="place-item">
                 <h2 className="text-center p-3">{place.name}</h2>
                 <img src={place.imageUrl} alt={place.name} />
                 <p className="paragrapheDescription">{place.description}</p>
@@ -104,14 +102,25 @@ export default function PlaceList() {
                     onClick={() => handleButtonClick(place)}
                     className="btnDetail"
                   >
-                    {" "}
-                    {/* Passer place ici */}
                     En savoir plus
                   </button>
                 </div>
               </div>
-            )
-          )}
+              {/* Ajout du bloc Clark, Pete et Chloé juste après la première carte Smallville */}
+              {idx === 0 && (
+                <div className="place-item">
+                  <img
+                    src={process.env.PUBLIC_URL ? process.env.PUBLIC_URL + "/images/persoSmallville/smallville-photo-tom-welling-allison-mack-1401548.jpg" : "/images/persoSmallville/smallville-photo-tom-welling-allison-mack-1401548.jpg"}
+                    alt="Clark Kent, Pete Ross et Chloé Sullivan"
+                    style={{ width: "100%", borderRadius: "8px", marginBottom: "10px" }}
+                  />
+                  <p className="paragrapheDescription">
+                    <b>Clark Kent, Pete Ross et Chloé Sullivan</b> incarnent l’amitié et la complicité au cœur de Smallville. Ensemble, ils traversent les épreuves du lycée, partagent des secrets et affrontent les mystères de la ville. Chloé, journaliste passionnée, soutient Clark dans sa quête de vérité, tandis que Pete, fidèle ami, l’accompagne dans ses aventures et protège ses secrets. Leur trio symbolise la force des liens humains face à l’extraordinaire, et rappelle que, même dans une ville pleine de mystères, l’amitié reste le plus grand des pouvoirs.
+                  </p>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
         </div>
         {open &&
           selectedPlace && ( // Affiche le modal si ouvert et que selectedPlace a une valeur
