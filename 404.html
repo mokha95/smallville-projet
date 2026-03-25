@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirection...</title>
+    <script type="text/javascript">
+      // Redirige vers l'index.html en conservant le chemin après le /smallville-projet/
+      var path = window.location.pathname;
+      var search = window.location.search || "";
+      var hash = window.location.hash || "";
+      var base = "/smallville-projet/";
+      if (path.indexOf(base) === 0) {
+        var newUrl = base + "index.html" + search + hash;
+        window.location.replace(newUrl);
+      } else {
+        window.location.replace(base);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Redirection...</h1>
+  </body>
+</html>
